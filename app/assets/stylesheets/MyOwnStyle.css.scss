@@ -1,0 +1,549 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 105px;
+  font-family: Times New Roman, Helvtica, clean, sans-serif;
+  background: #9BCDFF;
+ 
+  /*header*/
+  .navbar {
+    position: relative;
+    width: 940px;
+  
+    margin-left: 163px;
+
+   .navbar-inner {
+
+     background-color: #FF8533;
+     background-image: none;
+     padding-top: 5px;
+     margin-top: -60px;
+     z-index:10;
+     .nav{   
+       float: center;
+       margin-left:100px;
+       font-size: 1em;  
+       margin-top: 0px; 
+       background: #FF8533;           
+       padding-top: 0px;       
+       font-weight: bold;
+        a {
+         color: white;
+         font-family: Times New Roman;
+         margin-left: 30px;
+         letter-spacing: 2px;
+         &:hover {
+           color: $grayDarker;
+          }
+        }
+     }
+  }
+}
+ 
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  margin-top: -50px;
+  font-size: 3em;
+  color: #99501F;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: -91px;
+  font-weight: bold;
+  line-height: 1;
+  border-bottom: #993300;
+  &:hover {
+    color: #1A0D05;
+    text-decoration: none;
+  }
+}
+
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  margin-top: 10px;
+  background-color: white;
+  height: auto;
+   
+}
+
+
+.headline{
+ padding-top: 1px;
+ text-align: left;
+  h1{
+  font-size: 1.5em;
+   text-align: left;
+   margin-top: -50px;
+   margin-left: -50px;    
+   color: #995C00;
+   padding-top: -50px;
+   font-weight: bold;
+   line-height: 1;
+  }
+}
+
+
+
+
+/*home*/
+
+#slidepic{
+    width: 940px;
+    height: 340px;
+    margin-left: -60px; 
+}  
+
+#auto_resizeimage {width:100%; 
+height:100%;
+    width: auto\9; /* ie8 */
+}
+
+
+.mission{
+  width: 540px;
+  height: 320px;
+  margin-left:-50px;
+  margin-top:8px;
+  border-top:0px;
+  border: 2px solid #F8F8F7;
+  background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+  text-align: left;
+  h4{text-align: center;}
+  
+        
+}
+
+.donate{
+    width: 350px;
+    height: 320px;
+	  margin-top: -325px;
+	  margin-left: 510px;
+    border: 2px solid #F8F8F7;
+  background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+    text-align: left;
+     form{
+    margin-top: opx;
+    margin-left: 100px;
+    height:50px;
+
+    }
+    background-color: #F9F9F9;     
+}
+
+
+.other{
+  width: 920px;
+  height: 150px;
+  margin-left:-50px;
+  margin-top:8px;
+  border-top:0px;
+  border: 2px solid #F8F8F7;
+  background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+  text-align: left;
+  h4{text-align: center;
+     margin-top:-10px;
+  }
+  }
+
+
+/* about us */
+
+
+
+#about_tables{ 
+   margin-top: 10px;
+   width: 910px;
+    height: auto px;
+    margin-left: -50px;
+   letter-spacing: 1px;
+   border: 2px solid #F8F8F7;
+  background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+
+   text-align: left;
+
+    width: auto\9; /* ie8 */
+   caption {
+     padding: 0.3em;
+     text-align: left;
+     font-weight: bold;
+     color: #995C00;
+     
+     border-top-left-radius: 38px 100px;
+     border-top-right-radius: 50px 100px;
+    } 
+
+  .whitespace{
+    margin-top: 170px;      
+    line-height: 2;
+    padding: 0.3em;
+    .leftelement{
+     font-size: 0.8em;
+     text-align: left;
+     margin-left: 50px;
+    }
+  }
+  .rightelement{
+     width: 400px;
+     height:300px;
+           
+  }
+
+ 
+
+}
+ /* #about_table1{background: url("slideshow/4d6e9154a00cf.image.jpg") no-repeat;width:100%; 
+height:100%;}
+ #about_table2{background: url("slideshow/youngaf.jpg") no-repeat;width:100%; 
+height:100%;}
+ #about_table3{background: url("slideshow/49c3c8a00.jpg") no-repeat; width:100%; 
+height:100%;}
+ #about_table4{background: url("slideshow/130321161432-face-africa-11-horizontal-gallery.jpg") no-repeat; width:100%; 
+height:100%;} */
+
+
+
+
+/* activities and volunteers */
+
+#projectlist{
+  width: 200px;
+  height: 600px;
+  margin: 4px auto 0px 0px;
+  background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+  hr{border-top: 1px solid #FF8533;}
+   ul {
+    float: left;
+    list-style: none;
+
+    li {
+      line-height: 3;
+      margin-left: 10px;
+      font-size: 1em;
+    }
+  }
+  a:hover {text-decoration:underline;
+  font-size: 0.9em;}
+ 
+}
+
+
+
+#projectbody{
+  width: 600px;
+  height: auto px;
+  margin-top: -599px;
+  margin-left: 230px;
+ background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+  h3{   
+   text-align: center;
+   margin-top: -10px;     
+   padding-top: 15px;
+   font-weight: bold;
+   line-height: 1;
+  }
+  h4{color:#995C00;}
+
+  p{font-size: 1em;
+   text-align: left;
+   line-height: 1;}
+  .footer{display:none;}
+  .navbar{display:none;}
+}
+
+
+  .projectboximage{
+   width: 600px;
+   height: 290px;
+   margin-top: -10px;
+   margin-left:0px;
+   }
+  .projectoverview{
+  width: 600px;
+  height: auto px;
+  margin-top: 10px;
+  margin-left: 5px;  
+  font-size: 1.1em;
+   text-align: left;
+   padding-top: 5px;
+   line-height: 1;
+  }
+  .volunteerlink{
+   font-size: 2em;
+   text-align: left;
+   margin-top: 0px; 
+   margin-left: -400px;    
+   font-weight: bold;
+   h3{font-size: 0.5em;}
+
+   
+  }
+
+  #cartooltip{
+position: absolute;
+visibility: hidden;
+background-color: lightyellow;
+border: 2px solid red;
+padding: 5px;
+font-size: 120%;
+font-weight: bold;
+}
+
+
+
+* html #projectbody{ /*IE only style*/
+height: 400px;}
+
+
+
+/* contact */
+
+#contact_tables{
+  width: 900px;
+  margin-left:-40px;
+  letter-spacing: 1px;
+   border-top:0px;
+  border: 1px  #F8F8F7;
+  background-color:#F8F8F7;
+  border-top-left-radius: 10px 100px;
+  border-top-right-radius: 20px 110px;
+   border-style:outset;
+  caption {
+  padding: 0.3em;
+  text-align: left;
+  font-weight: bold;
+  color: #B8944D;
+
+  }
+
+ .whitespace{
+    margin-top: 170px;      
+    line-height: 2;
+    padding: 0.3em;
+   .leftelement{
+     font-size: 0.8em;
+     text-align: right;
+     font-weight: bold;
+     margin-left: 50px;
+    }
+
+    .rightelement{
+      font-size: 0.8em;
+      text-align: left;     
+    }
+
+  }
+}
+
+th, td {
+    caption-side: top;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 3; color:#995C00;}
+
+h1 {
+font-size: 1em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+
+
+
+
+/* footer  */
+
+
+
+
+footer {
+  margin-top: -40px;
+  width: 940px;
+  margin-left: 163px;
+  border-top: 1px solid $grayMediumLight;
+  
+  background: #FF8533;
+
+  padding: 0px 0 25px 0;      
+  -moz-box-shadow: 0 -2px 0 ;
+  -webkit-box-shadow: 0 -2px 0 ;
+  box-shadow: 0 -2px 0 ;
+  a {
+    color: white;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: center;
+    margin-left: 750px;
+    
+  }
+  ul {    
+    float: center;
+    list-style: none;
+    margin-left: -10px;
+    margin-top: -30px;
+    li {
+      float: left;
+      margin-left: 50px;
+    }
+  }
+}
+
+
+
+/* miscellanous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;   /* this line of code includes all the element  @mixin box_sizing  group which is on top*/
+}
+
+
+/* sidebar */
+
+aside {
+  section{
+  padding : 10px 0;
+  border-top: 1px solid $grayLighter;
+  &:first-child{
+  border: 0;
+  padding-top: 0;
+  }
+  h1 {
+  font-size: 1.4em;
+  text-align: left;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+     }
+  }
+}
+
+.gravator {
+  float: left;
+  margin-right: 10px;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+/*Sass’s @extend function to include the functionality of two Bootstrap classes control-group and error. As a result, on failed submission the error messages appear surrounded by red */
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+/* Users index page*/
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}

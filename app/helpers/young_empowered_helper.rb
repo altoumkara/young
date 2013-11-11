@@ -1,0 +1,2 @@
+module YoungEmpoweredHelper
+end

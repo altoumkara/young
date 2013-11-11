@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Empowerement Program For Young Africans | <%= yield(:title) %></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <script type="text/javascript">
+
+/***********************************************
+* Dynamic Ajax Content- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var loadedobjects=""
+var rootdomain="http://"+window.location.hostname
+
+function ajaxpage(url, containerid){
+var page_request = false
+if (window.XMLHttpRequest) // if Mozilla, Safari etc
+page_request = new XMLHttpRequest()
+else if (window.ActiveXObject){ // if IE
+try {
+page_request = new ActiveXObject("Msxml2.XMLHTTP")
+} 
+catch (e){
+try{
+page_request = new ActiveXObject("Microsoft.XMLHTTP")
+}
+catch (e){}
+}
+}
+else
+return false
+page_request.onreadystatechange=function(){
+loadpage(page_request, containerid)
+}
+page_request.open('GET', url, true)
+page_request.send(null)
+}
+
+function loadpage(page_request, containerid){
+if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1))
+document.getElementById(containerid).innerHTML=page_request.responseText
+}
+
+function loadobjs(){
+if (!document.getElementById)
+return
+for (i=0; i<arguments.length; i++){
+var file=arguments[i]
+var fileref=""
+if (loadedobjects.indexOf(file)==-1){ //Check to see if this object has not already been added to page before proceeding
+if (file.indexOf(".js")!=-1){ //If object is a js file
+fileref=document.createElement('script')
+fileref.setAttribute("type","text/javascript");
+fileref.setAttribute("src", file);
+}
+else if (file.indexOf(".css")!=-1){ //If object is a css file
+fileref=document.createElement("link")
+fileref.setAttribute("rel", "stylesheet");
+fileref.setAttribute("type", "text/css");
+fileref.setAttribute("href", file);
+}
+}
+if (fileref!=""){
+document.getElementsByTagName("head").item(0).appendChild(fileref)
+loadedobjects+=file+" " //Remember this object as being already added to page
+}
+}
+}
+
+</script>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+  
+    <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" /> 
+    <link rel="stylesheet" href="css/multimedia-portfolio.css" type="text/css" media="screen" /> 
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/thickbox-compressed.js"></script>
+    <script type="text/javascript" src="js/jquery.dimensions.js"></script>
+    <script type="text/javascript" src="js/ui.mouse.js"></script>
+    <script type="text/javascript" src="js/ui.slider.js"></script>
+    <script type="text/javascript" src="js/jquery.multimedia-portfolio.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("ul.multimedia-portfolio").multimedia_portfolio({width: 800});
+
+    });
+    </script>
+
+
+ 
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+
+</head>
+<body>
+	<%= render 'layouts/myheader' %>
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+	<%= render 'layouts/myfooter' %>
+ 
+
+  </body>
+</html>
