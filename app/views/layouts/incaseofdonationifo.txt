@@ -1,0 +1,32 @@
+ <div id="uses_of_donations">
+    <div class="actinline_center">
+      <div id="succceful_stories">
+     <%= link_to image_tag("slideshow/pie-sample.png", alt: "project5", :id => "auto_resizeimage") %>
+    </div>
+    <h3>How we use the donation:</h3>
+       <ul>
+        <li>Construction:</li>
+        <p> 20% of the money is used for bla bla bla<br>
+          because os such an such</p>
+
+         <li> association:</li>
+         <p> 10% of the money is used for bla bla bla<br>
+          because os such an such</p>
+
+          <li>Education:</li>
+         <p> 50% of the money is used for bla bla bla<br>
+          because os such an such</p>
+
+          <li>Dreams:</li>
+         <p> 20% of the money is used for bla bla bla<br>
+          because os such an such</p>
+
+       </ul>
+      </div>
+  </div>
+
+  <div id="projectbody_for_projects">
+     
+
+
+
